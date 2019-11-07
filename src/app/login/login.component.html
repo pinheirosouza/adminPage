@@ -1,0 +1,28 @@
+<div class="center" fxLayout='row' fxLayoutAlign="center center" fxLayoutGap="20px">
+  <div>
+  <img src="../../../assets/img/logo.png" width="350" alt="eutrampo-logo" class="reduced">
+  </div>
+  
+  <div class="center2" fxLayout="column" fxLayoutAlign="center center">
+    <img src="../../../assets/img/logo.png" width="150" alt="eutrampo-logo">
+    <form [formGroup]="loginForm" (ngsubmit)="onSubmit()" fxLayout="column" fxLayoutAlign="center center" >
+      <mat-form-field class="lenLoginArea">
+        <input matInput placeholder="Email" [formControl]="emailFormControl" [errorStateMatcher]="matcher" style="color: #FDEC08">
+        <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+          Entre com um email válido
+        </mat-error>
+        <mat-error *ngIf="emailFormControl.hasError('required')">
+          Entre com um email válido
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="lenLoginArea">
+        <input matInput placeholder="Senha" [formControl]="passwordFormControl" [errorStateMatcher]="matcher" style="color: #FDEC08" type="password">
+        <mat-error *ngIf="passwordFormControl.hasError('required')">
+          Digite sua senha
+        </mat-error>
+      </mat-form-field>
+      <button mat-button id="entrar" (click)="onSubmit()">ENTRAR</button>
+      <a id="forgotPassword" href="/">Esqueceu a senha?</a>
+    </form>
+  </div>
+</div>

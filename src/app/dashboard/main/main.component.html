@@ -1,0 +1,102 @@
+<mat-grid-list cols = "4" rowHeight = "100px" >
+    <!-- Primeira linha -->
+    <mat-grid-tile [colspan] = "1" [rowspan] = "2">
+        <a class="card-link" href="#">
+            <mat-card class="card-1col-line1">
+                <mat-card-content>
+                    <h1>315</h1>
+                    <p>TRABALHOS CONCLUÍDOS</p>
+                </mat-card-content>
+            </mat-card>
+        </a>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan] = "1"[rowspan] = "2">
+        <a class="card-link" href="#">
+            <mat-card class="card-1col-line1">
+                <mat-card-content>
+                    <h1>315</h1>
+                    <p>TRABALHO GERADO</p>
+                </mat-card-content>
+            </mat-card>
+        </a>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan] = "1"[rowspan] = "2">
+        <a class="card-link" href="#">
+            <mat-card class="card-1col-line1">
+                <mat-card-content>
+                    <h1>315</h1>
+                    <p>TRABALHO GERADO</p>
+                </mat-card-content>
+            </mat-card>
+        </a>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan] = "1"[rowspan] = "2">
+        <a class="card-link" href="#">
+            <mat-card class="card-1col-line1">
+                <mat-card-content>
+                    <h1>4.000R$</h1>
+                    <p>RECEITA GERADA</p>
+                </mat-card-content>
+            </mat-card>
+        </a>
+    </mat-grid-tile>
+    <!-- Segunda linha -->
+    <mat-grid-tile [colspan] = "2"[rowspan] = "4">
+        <table class="card-2col" mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+            <!--- Note that these columns can be defined in any order.
+                    The actual rendered columns are set as a property on the row definition" -->
+            
+            <!-- Position Column -->
+            <ng-container matColumnDef="position">
+                <th mat-header-cell *matHeaderCellDef> Posição </th>
+                <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+            </ng-container>
+            
+            <!-- Name Column -->
+            <ng-container matColumnDef="name">
+                <th mat-header-cell *matHeaderCellDef> Vagas com mais interações </th>
+                <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+            </ng-container>
+            
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan] = "2"[rowspan] = "4">
+            <table class="card-2col" mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+                <!--- Note that these columns can be defined in any order.
+                        The actual rendered columns are set as a property on the row definition" -->
+                
+                <!-- Position Column -->
+                <ng-container matColumnDef="position">
+                    <th mat-header-cell *matHeaderCellDef> Posição </th>
+                    <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+                </ng-container>
+                
+                <!-- Name Column -->
+                <ng-container matColumnDef="name">
+                    <th mat-header-cell *matHeaderCellDef> Cursos com mais interações </th>
+                    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                </ng-container>
+                
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+    </mat-grid-tile>
+    <!-- Terceira linha -->
+    <mat-grid-tile [colspan] = "3"[rowspan] = "3">
+        <mat-card class="card-3col">
+            
+        </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan] = "1"[rowspan] = "3">
+        <a class="card-link" href="#">
+            <mat-card class="card-1col-line3">
+                <img class="profile-avatar" src="../../../assets/img/marc.jpg">
+                <p>SERVIÇO SOCIAL DO COMÉRCIO</p>
+                <h5>SESC</h5>
+            </mat-card>
+        </a>    
+    </mat-grid-tile>
+ </mat-grid-list>

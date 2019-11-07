@@ -1,0 +1,23 @@
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import 'variables';
+@import '../node_modules/font-awesome/scss/font-awesome';
+@import "~@fortawesome/fontawesome-free/css/all.css";
+
+
+.mat-form-field-label{
+    color:white !important;
+}
+
+.mat-input-underline {
+    background-color: white;
+}
+
+.mat-button, .mat-raised-button{
+    background-color:#FDEC08;
+} 
+
+.blue-snackbar {
+    background: #FDEC08;
+  }
+
+//#FDEC08 (Amarelo)
